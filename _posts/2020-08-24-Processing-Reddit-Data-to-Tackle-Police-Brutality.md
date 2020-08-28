@@ -3,7 +3,7 @@ title: Processing Reddit Data to Tackle Police Brutality
 subtitle: A short dive into the world of Natural Language Processing
 ---
 
-## Background
+## To Preface:
 
 This project was made in conjunction with Human Rights First, an independant advocacy and action organization. The work they do is centered around getting America to stand up to its ideals, and in doing so, they sought the help of Lambda School for their project. Their challenge to my group and I, as well as two other groups of students here at Lambda, was to see if we could make a map of continental America that showed events of police brutality, using data aggregated from Reddit and Twitter.
 
@@ -13,9 +13,11 @@ While most of the issues pertaining to the website and getting that to work fell
 
 At first, both Chris and I worried about using FastAPI and AWS; we'd never worked with either framework, so we worried that we'd have to spend a fair amount of time learning how it works and getting it set up. On further inspection, we realised that FastAPI beared a striking resemblance to Flask, another kind of web-app framework, but came with a built-in user interface that allowed us to test the functions of our app. As for the Amazon Web Services, we haven't gotten that far, but we expect to have an app built later this week.
 
-## API Roadmap Breakdown
+## Preparation, Planning, and Complications
 
-At the start of working on the project, we broke down what we thought we'd need to make in order to get our app running. This included things like finding a source of data, cleaning it, getting the app up and running, and outputting the cleaned data through an endpoint in the app. There were also times during working on the project where there was some confusion with how the data would flow from the API to the backend, and at one point, Chris and I had set up a database to hold data because there was some miscommunication as to who would be sanitizing the data for duplicates.
+At the start of working on the project, we broke down what we thought we'd need to make in order to get our app running. This included things like finding a source of data, cleaning it, getting the app up and running, and outputting the cleaned data through an endpoint in the app, which contained all the data needed for Back-end to take it and display it on the map.
+
+In addition, there would be a few times during working on the project where there was some confusion with how the data would flow from the API to the backend. At one point, Chris and I had set up a database to hold data, thinking we would be ensuring that there weren't any duplicates in the data, only to realize that it was Back-end who would be dealing with that.
 
 ![picture of trello board](https://i.imgur.com/BEg4Eao.png)
 
