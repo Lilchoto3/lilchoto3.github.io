@@ -31,7 +31,7 @@ Week one of working on the project consisted of planning things out. We decided 
 
 ![diagram of the project](https://i.imgur.com/0U4nrK7.png)
 
-###### Diagram of our project layout
+###### Diagram of our project layout.
 
 ### Week Two: Data Exploration
 
@@ -39,21 +39,27 @@ Week Two was where the teams split up and started working more specifically on s
 
 ![an example of the data we pulled from reddit](https://i.imgur.com/b5xe2rG.png)
 
-###### Example data pulled from Deddit
+###### Example data pulled from Deddit.
 
 ### Week Three: API Updates 
 
 Week Three consisted mostly of figuring out how to build the API locally in Docker, and before that, getting Docker to work, even. Once that was all sorted, however, it didn't take long to transfer the code we'd written in various notebooks to output the data from the 846 API as a proof that our API was working.
 
+Our first real bit of technical complications happened here, when both Chris and I realized that we could not get our app running since neither of us could use Docker since we were both on Windows 10 Home. Our previous experience had taught us that Windows 10 Home was not capable of doing any sort of visualization without an experimental new update and WSL2, and we worried that we wouldn't be able to build the app. Thankfully, the windows update that contained the ability to create virtualizations on Windows 10 Home had been properly released and wasn't experimental anymore, so all I had to do was update Windows and install WSL2, and I was able to create Docker images and run containers.
+
 ![The title card of our API](https://i.imgur.com/NLViiKy.png)
+
+###### Success! The API is working!
 
 ### Week Four: Modelling the Data
 
 Week Four is where a large portion of our work on actually serving the data from Reddit and Twitter got done. We updated the app to create new endpoints that served data from Reddit filtered through a model. The model itself uses Natural Language Processing to determine if the post from reddit is about police brutality or not, and only the data returned by the model as being about police brutality gets passed along.
 
+Initially, there were some issues publishing the app to AWS, as I, who was on app-publishing duty, had never used ElasticBeanstalk before. I had some issues installing ElasticBeanstalk, as it kept failing saying that the module `six` was not installed, after telling me that it installed it. It wasn't until I found, in the instructions given by Amazon themselves, that I had to run the installer through PowerShell, since I was on Windows, that it finally installed and I got the app published later that week.
+
 ![an example of the app in action](https://i.imgur.com/qQfRtgr.png)
 
-###### An example of the app in action
+###### An example of the app in action.
 
 ## As of Present
 
@@ -72,6 +78,6 @@ It goes without saying that work on any code will lead to bugs down the line, if
 
 ### What I've learned
 
-Number one: communication is key, between everyone on the team all the time, always. Communication has solved far too many problems for me to count, not only on this project, but on other projects as well. Being able to communicate effectively, even just a simple "hey, this is what I'm working on, here's how it works, here's how you access it, bla bla bla" works wonders. Same with pulling in team members from outside your scope of work and asking about how things will connect together.
+Number one: communication is key, between everyone on the team all the time, always. Communication has solved far too many problems for me to count, not only on this project, but on other projects as well. Being able to communicate effectively, even just a simple meetup at the end of the day works wonders. Same with pulling in team members from outside your scope of work and asking about how things will connect together.
 
 Other than that, I've learned that FastAPI is very cool and useful for quickly setting up apps that output data, it's a very nice framework and I'll definitely keep it in mind.
